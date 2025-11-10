@@ -1,0 +1,28 @@
+# 📦 Dependencias
+node_modules/
+
+# 🔐 Variables de entorno
+.env
+
+# 🧪 Archivos de pruebas y cobertura
+coverage/
+
+# 🐞 Logs y errores
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 🖥️ Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# ⚙️ Configuración local de VSCode (opcional)
+.vscode/
+
+# 🏗️ Archivos de build (si usas herramientas de bundling)
+dist/
+build/
+
+auth.routes.js
