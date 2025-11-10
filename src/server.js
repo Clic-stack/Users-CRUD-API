@@ -1,19 +1,22 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import app from './app.js'
 import sequelize from './db/connect.js'
 
 const startServer = async () => {
     try {
-        console.log('Conectando a la base de datos...')
+        console.log('Establishing a database connection...')
         await sequelize.authenticate()
         await sequelize.sync({ force: false })
-        console.log('Base de datos conectada')
+        console.log('Database connection successful')
 
-        console.log('El servidor se está inicializando')
+        console.log('The server is initializing')
         app.listen(app.get('port'), () => {
-            console.log(`Servidor corriendo en el puerto http://localhost:${app.get('port')}`)
+            console.log(`Server runs in port http://localhost:${app.get('port')}`)
         })
     } catch (error) {
-        console.log('Algo paso', error)
+        console.log('Ooops something was wrong', error)
         process.exit(1)
     }
 }

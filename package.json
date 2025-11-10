@@ -2,9 +2,11 @@
   "name": "s02e02",
   "version": "1.0.0",
   "scripts": {
-    "dev": "node --watch --env-file=.env src/server.js"
+    "dev": "node --watch --env-file=.env src/server.js",
+    "start": "node src/server.js"
   },
   "type": "module",
+  "engines": { "node": ">=18" },
   "dependencies": {
     "express": "^5.1.0",
     "pg": "^8.16.3",
